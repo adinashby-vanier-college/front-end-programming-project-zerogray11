@@ -10,6 +10,7 @@
     align-items: center;
     justify-content:flex-start;
     gap:30%;
+<<<<<<< HEAD
     position: relative;
     background-image: url(greycloud.png);
     background-size: cover;
@@ -28,6 +29,23 @@
     }
     100% {
         background-position: 0 0; 
+=======
+    position: relative; 
+    background-image: url(greycloud.png);
+    background-size: cover;
+    background-position: 0 0; 
+    animation: moveClouds 30s linear infinite; 
+}
+@keyframes moveClouds {
+    0% {
+        background-position: 0 0;  /* Start at the left */
+    }
+    50% {
+        background-position: 100% 0;  /* Move to the right */
+    }
+    100% {
+        background-position: 0 0;  /* Move back to the left */
+>>>>>>> f3a39676e3028f46ab8191d20b9b1a81a29e7b90
     }
 }
 #boxIntro{
@@ -36,6 +54,10 @@ flex-direction: column;
 gap: 20px;
 animation: border-glow 0.5s ease-in-out infinite;
 background-color: rgba(255, 255, 255, 0.35); 
+<<<<<<< HEAD
+=======
+/*background-color: rgba(173, 216, 230, 0.5);*/
+>>>>>>> f3a39676e3028f46ab8191d20b9b1a81a29e7b90
 height:40vh;
 width: 70vw;
 
@@ -50,6 +72,7 @@ font-family: 'Exo 2', sans-serif;
     cursor: pointer;
     }
 .arrow-right.hover {    
+<<<<<<< HEAD
     color: #d1d1d1; 
     text-shadow: 0 0 8px rgba(200, 200, 200, 1), 0 0 12px rgba(200, 200, 200, 0.7); 
     background-color: #444444;}
@@ -57,6 +80,16 @@ font-family: 'Exo 2', sans-serif;
     color: #d1d1d1; 
     text-shadow: 0 0 8px rgba(200, 200, 200, 1), 0 0 12px rgba(200, 200, 200, 0.7); 
     background-color: #444444; 
+=======
+    color: #d1d1d1; /* Brighter icy grey on hover */
+    text-shadow: 0 0 8px rgba(200, 200, 200, 1), 0 0 12px rgba(200, 200, 200, 0.7); /* Enhanced icy glow */
+    background-color: #444444; /* Darker grey background on hover */
+}
+.hidden-box.hover{    
+    color: #d1d1d1; /* Brighter icy grey on hover */
+    text-shadow: 0 0 8px rgba(200, 200, 200, 1), 0 0 12px rgba(200, 200, 200, 0.7); /* Enhanced icy glow */
+    background-color: #444444; /* Darker grey background on hover */
+>>>>>>> f3a39676e3028f46ab8191d20b9b1a81a29e7b90
 }
 .btn-intro{
     font-family: 'Orbitron', sans-serif;
@@ -65,19 +98,32 @@ font-family: 'Exo 2', sans-serif;
     height: 35px;
     font-size: 16px;
     border-radius: 99%;
+<<<<<<< HEAD
     background-color: #333333; 
     border: 3.5px solid lightgray(150, 150, 150, 0.7); 
     color: lightgray;  /* Dark icy grey font color */
     text-shadow: 0 0 5px rgba(150, 150, 150, 0.9), 0 0 10px rgba(150, 150, 150, 0.6); 
+=======
+    background-color: #333333; /* Dark grey background for contrast */
+    border: 3.5px solid lightgray(150, 150, 150, 0.7); /* Frosted grey border */
+    color: lightgray;  /* Dark icy grey font color */
+    text-shadow: 0 0 5px rgba(150, 150, 150, 0.9), 0 0 10px rgba(150, 150, 150, 0.6); /* Strong icy glow */
+>>>>>>> f3a39676e3028f46ab8191d20b9b1a81a29e7b90
     transition: all 0.3s ease;
     cursor: pointer;
    
 }
 
 .btn-intro:hover {
+<<<<<<< HEAD
     color: #d1d1d1;
     text-shadow: 0 0 8px rgba(200, 200, 200, 1), 0 0 12px rgba(200, 200, 200, 0.7); 
     background-color: #444444; 
+=======
+    color: #d1d1d1; /* Brighter icy grey on hover */
+    text-shadow: 0 0 8px rgba(200, 200, 200, 1), 0 0 12px rgba(200, 200, 200, 0.7); /* Enhanced icy glow */
+    background-color: #444444; /* Darker grey background on hover */
+>>>>>>> f3a39676e3028f46ab8191d20b9b1a81a29e7b90
 }
 
 #boxInfo{
@@ -96,8 +142,13 @@ font-family: 'Exo 2', sans-serif;
     
 }
 .linkedin:hover, .github:hover{
+<<<<<<< HEAD
     color: #d1d1d1; 
     text-shadow: 0 0 8px rgba(200, 200, 200, 1), 0 0 12px rgba(200, 200, 200, 0.7); 
+=======
+    color: #d1d1d1; /* Brighter icy grey text on hover */
+    text-shadow: 0 0 8px rgba(200, 200, 200, 1), 0 0 12px rgba(200, 200, 200, 0.7); /* Enhanced icy glow */
+>>>>>>> f3a39676e3028f46ab8191d20b9b1a81a29e7b90
    }
 #boxName{
     margin-left:20px;
@@ -114,6 +165,7 @@ font-family: 'Exo 2', sans-serif;
 }
 @keyframes border-glow {
     0% {
+<<<<<<< HEAD
         border-color: rgba(192, 192, 192, 0.5); 
         box-shadow: 0 0 10px rgba(192, 192, 192, 0.5), 0 0 20px rgba(192, 192, 192, 0.3);
     }
@@ -123,6 +175,17 @@ font-family: 'Exo 2', sans-serif;
     }
     100% {
         border-color: rgba(192, 192, 192, 0.5);
+=======
+        border-color: rgba(192, 192, 192, 0.5); /* Light silver/grey */
+        box-shadow: 0 0 10px rgba(192, 192, 192, 0.5), 0 0 20px rgba(192, 192, 192, 0.3);
+    }
+    50% {
+        border-color: rgba(192, 192, 192, 0.7); /* Slightly brighter silver */
+        box-shadow: 0 0 15px rgba(192, 192, 192, 0.7), 0 0 30px rgba(192, 192, 192, 0.5);
+    }
+    100% {
+        border-color: rgba(192, 192, 192, 0.5); /* Light silver/grey */
+>>>>>>> f3a39676e3028f46ab8191d20b9b1a81a29e7b90
         box-shadow: 0 0 10px rgba(192, 192, 192, 0.5), 0 0 20px rgba(192, 192, 192, 0.3);
     }
 }
@@ -133,7 +196,11 @@ font-family: 'Exo 2', sans-serif;
 }
 .Home, .About, .Projects, .Services, .Contact {
     font-size: 0.7rem; 
+<<<<<<< HEAD
     font-family: 'Orbitron', sans-serif; 
+=======
+    font-family: 'Orbitron', sans-serif; /* Adjust font size */
+>>>>>>> f3a39676e3028f46ab8191d20b9b1a81a29e7b90
     color: white;
     padding: 10px;
     cursor: pointer;
@@ -184,15 +251,24 @@ font-family: 'Exo 2', sans-serif;
 
   }
   .hidden-box > * {
+<<<<<<< HEAD
     
     display: inline-block; 
+=======
+    /* Ensure all direct children of .hidden-box are flex items */
+    display: inline-block; /* Ensure items stay in a row */
+>>>>>>> f3a39676e3028f46ab8191d20b9b1a81a29e7b90
    
 }
   .hidden-box.show {
     display: block;
     opacity: 1;
     transition: opacity 0.3s ease-in-out; 
+<<<<<<< HEAD
    
+=======
+    /*animation: fadeIn 1s ease;*/
+>>>>>>> f3a39676e3028f46ab8191d20b9b1a81a29e7b90
   }
   @keyframes fadeIn {
     from {
@@ -208,7 +284,11 @@ font-family: 'Exo 2', sans-serif;
     display: flex;
     flex-direction: column;
     background-image: url(aurore.jpeg);
+<<<<<<< HEAD
     
+=======
+    /*background:linear-gradient(45deg, rgba(32, 54, 77, 0.9), rgba(98, 120, 142, 0.85), rgba(50, 68, 87, 0.8), rgba(34, 50, 65, 0.85));*/
+>>>>>>> f3a39676e3028f46ab8191d20b9b1a81a29e7b90
   
     align-items: center;
     background-size: cover;
