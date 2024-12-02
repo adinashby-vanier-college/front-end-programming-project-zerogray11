@@ -417,7 +417,8 @@ width: 80%;
  
  .javascript, .java, .sql, .html, .css, .nodejs, .aws, .photoshop{
     text-align: center;
-    font-family: "Roboto Mono", serif;
+    font-family: 'Orbitron', sans-serif;
+    color:greenyellow;
     height:40px;
     width: 40%;
     font-weight: 520;
@@ -460,11 +461,12 @@ width: 80%;
  }
  .polisci, .compsci, .cloud{
     text-align: center;
-    font-family: "Roboto Mono", serif;
+    font-family: 'Orbitron', sans-serif;
     font-weight: 520;
     height:50px;
     width: 40%;
     cursor: pointer;
+    color:greenyellow;
 
    
  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(78,169,212,1) 49%, rgba(29,253,169,1) 99%, rgba(69,252,153,1) 100%);
@@ -642,26 +644,25 @@ width: 80%;
  #boxContact{
  height:100svh;
  background-image: url(glacier.jpeg);
-    background-size: cover;
-/*
- background: linear-gradient(90deg, rgba(65,58,180,1) 14%, rgba(78,154,212,1) 54%, rgba(211,211,211,1) 100%, rgba(69,183,252,1) 100%);*/
+background-size: cover;
  display: flex;
  flex-direction: column;
  align-items: center;
- gap:25px;
+ gap:20px;
+ 
  }
  .ctitle{
     margin-top: 5px;
    background-color: rgba(34, 102, 170, 1);
-   border-radius: 60%;
+   border-radius: 90%;
    padding: 30px;
     height: 100%;
     width: max-content;
     display: flex;
-justify-content: center;
+    justify-content: center;
     flex-direction: column;
     text-align: center;
-    gap:10px;
+    gap:15px;
  
  
  }
@@ -692,6 +693,8 @@ justify-content: center;
   width: 80%; 
   display: flex;
   flex-direction: row;
+  gap:50px;
+  margin-right: 60px;
  }
  #connect{
     
@@ -862,6 +865,18 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
  width: 100%;
  background-color: white;
  }
+ 
+ #serviceBoxes > div {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#serviceBoxes p {
+    margin-top: 10px;
+    color: #666;
+}
  #boxServices{
     display: flex;
     flex-direction: column;
@@ -893,6 +908,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
     flex-direction: row;
     height: 65%;
     width: 95%;
+    gap:15px;
 }
 
 .Backendservice{
@@ -901,7 +917,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
     align-items: center;
     height: 100%;
     width: 30%;
-    gap:30px;
+   
     
 }
 .backendtitle{
@@ -925,7 +941,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
     height: 100%;
     width: 30%;
     align-items: center;
-    gap:30px;
+   
     
 }
 .frontendtitle{
@@ -948,7 +964,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
     height: 100%;
     width: 30%;
     align-items: center;
-    gap: 30px;
+    
     
 }
 
@@ -973,7 +989,18 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
     height: 100%;
     width: 30%;
    align-items: center;
-   gap:30px;
+   
+}
+#boxServicesTitle h2,
+#serviceBoxes > div,
+.projectstitlebox,
+.project1, .project2,.project3,.project4
+#aboutTitle,
+#description,
+#skills {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 .omtitle{
     font-size: 1.2rem;
@@ -988,15 +1015,6 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
     width: 60%;
 }
 .omdescription{}
-.serviceBoxes img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for both zoom and shadow */
-}
-
-/* Hover effect for the images */
-.serviceBoxes div:hover img {
-    transform: scale(1.1);  /* Zoom in the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Add a subtle shadow */
-}
 
  
  
