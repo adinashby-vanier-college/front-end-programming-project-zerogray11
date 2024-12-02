@@ -10,7 +10,7 @@ function checkScroll(){
 }
 window.addEventListener('scroll',checkScroll);
 
-document.querySelectorAll('.javascript, .java, .sql, .html, .css, .nodejs, .aws, .photoshop, .polisci, .compsci, .cloud, .sendmessage').forEach(button => {
+document.querySelectorAll('.javascript, .java, .sql, .html, .css, .nodejs, .aws, .photoshop, .polisci, .compsci, .cloud, .sendmessage, .btn-intro').forEach(button => {
     button.addEventListener('mouseenter', () => {
         button.style.transform = 'scale(1.1)';
         button.style.transition = 'transform 0.3s ease-in-out';
@@ -18,8 +18,15 @@ document.querySelectorAll('.javascript, .java, .sql, .html, .css, .nodejs, .aws,
     button.addEventListener('mouseleave', () => {
         button.style.transform = 'scale(1)';
     });
-});
 
+    // Optional: Add click effect
+    button.addEventListener('click', () => {
+        button.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            button.style.transform = 'scale(1)';
+        }, 100);
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     // Service descriptions
@@ -94,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 });
             } else {
-                // Fade out when scrolling away
+                
                 elementsToAnimate.forEach(element => {
                     element.style.opacity = '0';
                     element.style.transform = 'translateY(50px)';
@@ -103,14 +110,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Prepare initial state for all elements
+    
     elementsToAnimate.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(50px)';
         element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     });
 
-    // Observe all unique parent containers
+   
     const containersToObserve = [
         document.getElementById('boxServices'),
         document.getElementById('boxProjects'),
@@ -121,3 +128,4 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(container);
     });
 });
+
