@@ -70,6 +70,7 @@ justify-content: space-between;
  p{
 font-family: "Roboto Mono", serif;
 color: black;
+width: 90%;
 margin-top: 20px;
 margin-left: 40px;
 text-indent: 20px;
@@ -610,6 +611,7 @@ perspective: 1000px;
     cursor: pointer;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
  }
  .project-link {
     display: block;
@@ -638,6 +640,7 @@ perspective: 1000px;
     cursor: pointer;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
  }
  .project2:hover{
     transform: translateY(-10px) rotateY(5deg) rotateX(5deg);
@@ -693,7 +696,7 @@ background-size: cover;
     margin-top: 5px;
    background-color: rgba(34, 102, 170, 1);
    border-radius: 90%;
-   padding: 30px;
+   padding: 20px;
     height: 100%;
     width: max-content;
     display: flex;

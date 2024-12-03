@@ -19,7 +19,7 @@ document.querySelectorAll('.javascript, .java, .sql, .html, .css, .nodejs, .aws,
         button.style.transform = 'scale(1)';
     });
 
-    // Optional: Add click effect
+    // Add click effect
     button.addEventListener('click', () => {
         button.style.transform = 'scale(0.95)';
         setTimeout(() => {
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     // Collect all elements
-    const elementsToAnimate = animationElements.flatMap(item => 
+    const elementsToAnimate = animationElements.flatMap(item =>
         Array.from(document.querySelectorAll(item.selector))
     );
 
@@ -85,24 +85,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create Intersection Observer
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
+            const targetElements = Array.from(
+                entry.target.querySelectorAll(
+                    '#boxServicesTitle h2, #serviceBoxes > div, .project1, .project2, .project3, .project4, .projectstitlebox, #aboutTitle, #description, #skills'
+                )
+            );
+
             if (entry.isIntersecting) {
-                // Animate elements when they come into view
-                animationElements.forEach((config, sectionIndex) => {
-                    const sectionElements = Array.from(document.querySelectorAll(config.selector));
-                    
-                    sectionElements.forEach((element, elementIndex) => {
-                        // Calculate delay based on section and element index
-                        const delay = (sectionIndex * 200) + (elementIndex * 200);
-                        
-                        setTimeout(() => {
-                            element.style.opacity = '1';
-                            element.style.transform = 'translateY(0)';
-                        }, delay);
-                    });
+                targetElements.forEach((element, index) => {
+                    setTimeout(() => {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }, index * 200);
                 });
             } else {
-                
-                elementsToAnimate.forEach(element => {
+                targetElements.forEach(element => {
                     element.style.opacity = '0';
                     element.style.transform = 'translateY(50px)';
                 });
@@ -110,22 +107,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    
+    // Prepare initial state for all elements
     elementsToAnimate.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(50px)';
-        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        element.style.transition = 'opacity 0.3s ease, transform 0.6s ease';
     });
 
-   
+    // Observe all sections
     const containersToObserve = [
         document.getElementById('boxServices'),
         document.getElementById('boxProjects'),
-        
+        document.getElementById('boxAbout')
     ].filter(container => container !== null);
 
     containersToObserve.forEach(container => {
         observer.observe(container);
     });
 });
-
