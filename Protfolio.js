@@ -67,7 +67,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { selector: '.projectstitlebox', type: 'title' },
         { selector: '#aboutTitle', type: 'title' },
         { selector: '#description', type: 'content' },
-        { selector: '#skills', type: 'content' }
+        { selector: '#skills', type: 'content' },
+        { selector: '#boxContact .ctitle', type: 'title' },
+        { selector: '#boxContact #connect', type: 'content' },
+        { selector: '#boxContact #writingboxes', type: 'content' },
+        { selector: '#boxContact .Reserved', type: 'content' }
     ];
 
     // Collect all elements
@@ -87,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             const targetElements = Array.from(
                 entry.target.querySelectorAll(
-                    '#boxServicesTitle h2, #serviceBoxes > div, .project1, .project2, .project3, .project4, .projectstitlebox, #aboutTitle, #description, #skills'
+                    '#boxServicesTitle h2, #serviceBoxes > div, .project1, .project2, .project3, .project4, .projectstitlebox, #aboutTitle, #description, #skills, #boxContact .ctitle, #boxContact #connect, #boxContact #writingboxes, #boxContact .Reserved'
                 )
             );
 
@@ -118,7 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const containersToObserve = [
         document.getElementById('boxServices'),
         document.getElementById('boxProjects'),
-        document.getElementById('boxAbout')
+        document.getElementById('boxAbout'),
+        document.getElementById('boxContact')
     ].filter(container => container !== null);
 
     containersToObserve.forEach(container => {

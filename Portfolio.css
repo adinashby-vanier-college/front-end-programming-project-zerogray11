@@ -610,7 +610,7 @@ perspective: 1000px;
     background-position: center;
     cursor: pointer;
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
   
  }
  .project-link {
@@ -622,8 +622,8 @@ perspective: 1000px;
  
  
  .project1:hover {
-    transform: translateY(-10px) rotateY(5deg) rotateX(5deg);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px) rotateY(5deg) rotateX(5deg) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2)!important;
  }
  .project1 iframe{
     width: 100%;
@@ -639,12 +639,12 @@ perspective: 1000px;
     background-position: center;
     cursor: pointer;
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
    
  }
  .project2:hover{
-    transform: translateY(-10px) rotateY(5deg) rotateX(5deg);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px) rotateY(5deg) rotateX(5deg)!important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2)!important;
  }
  .project3{
     animation: border-glow 0.5s ease-in-out infinite;
@@ -659,8 +659,8 @@ perspective: 1000px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
  }
  .project3:hover{
-    transform: translateY(-10px) rotateY(5deg) rotateX(5deg);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px) rotateY(5deg) rotateX(5deg)!important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2)!important;
  }
  .project4{
     animation: border-glow 0.5s ease-in-out infinite;
@@ -672,11 +672,11 @@ perspective: 1000px;
     background-position: center;
     cursor: pointer;
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease!important;
  }
  .project4:hover{
-    transform: translateY(-10px) rotateY(5deg) rotateX(5deg);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px) rotateY(5deg) rotateX(5deg)!important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2)!important;
  }
  
  
@@ -693,11 +693,12 @@ background-size: cover;
  
  }
  .ctitle{
-    margin-top: 5px;
-   background-color: rgba(34, 102, 170, 1);
+    margin-top: 10px;
+   /*background-color: rgba(34, 102, 170, 1);*/
+   background: linear-gradient(to right, rgba(255, 105, 180, 0.8), rgba(65, 105, 225, 0.8));
    border-radius: 90%;
-   padding: 20px;
-    height: 100%;
+   padding: 18px;
+    height: max-content;
     width: max-content;
     display: flex;
     justify-content: center;
@@ -777,13 +778,46 @@ background-size: cover;
  .email svg{
     margin-right: 10px;
  }
- .eaddress{
+ /*.eaddress{
  font-size: 1.2rem;
  margin-left: 30px;
  font-family: 'Exo 2', sans-serif;
  font-weight: 500;
  color:silver;
- }
+ }*/
+ .eaddress {
+    font-size: 1.2rem;
+    margin-left: 30px;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 500;
+    color: silver;
+   
+  }
+  
+  .llink::before, .eaddress::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    bottom: 50px;
+    width: calc(60% + 20px);
+    height: 60%;
+    background: linear-gradient(to right, rgba(255, 105, 180, 0.3), rgba(65, 105, 225, 0.3));
+    transform: rotate(-2deg);
+    z-index: -1;
+    border-radius: 5px;
+    animation: paint-sweep 3s infinite alternate;
+  }
+  
+  @keyframes paint-sweep {
+    from {
+      transform: rotate(-2deg) scale(0.9);
+      opacity: 0.7;
+    }
+    to {
+      transform: rotate(2deg) scale(1.1);
+      opacity: 0.5;
+    }
+  }
  #linkedinbox{
     height: 30%;
     width: 100%;
@@ -815,21 +849,20 @@ background-size: cover;
     font-family: 'Exo 2', sans-serif;
     font-weight: 500;
     color:silver;
-    font-size: 1.2rem;
+    font-size: 1.2rem;}
  
  
- }
  #writingboxes{
-    
+    margin-top:20px;
     height:100%;
     width:50%;
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap:35px;
   
  }
  .Emailbox{
-    
+   
     height:20%;
     width: 100%;
     display: flex;
@@ -842,9 +875,10 @@ background-size: cover;
     display: flex;
     flex-direction: column;
     background-color: white;
+
  }
  .Messagebox{
-    height:100%;
+    height:80%;
     width: 100%; 
     display: flex;
     flex-direction: column;
@@ -857,30 +891,27 @@ background-size: cover;
     font-weight: 500;
     border: 2px solid white;
     font-size: 0.9rem;
-    background: rgb(65,58,180);
+    background: linear-gradient(to right, rgba(255, 105, 180, 0.8), rgba(65, 105, 225, 0.8));
+   
+    /*background: rgb(65,58,180);
     background: rgb(45,94,200);
 background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, rgba(17,33,61,1) 48%, rgba(3,50,146,1) 81%, rgba(0,110,208,1) 100%);
  /*background: linear-gradient(90deg, rgba(65,58,180,1) 14%, rgba(78,154,212,1) 54%, rgba(211,211,211,1) 100%, rgba(69,183,252,1) 100%);
   */
  }
- .Reserved{
-    margin-top:auto;
-   
-    height:10svh ;
-    width: 100%;
-    background: rgb(65,58,180);
- background: linear-gradient(90deg, rgba(65,58,180,1) 14%, rgba(78,154,212,1) 54%, rgba(211,211,211,1) 100%, rgba(69,183,252,1) 100%);
- }
+
  .boxemailtitle{
     font-size: 1rem;
     font-family: 'Orbitron', sans-serif;
     font-weight: 500;
     color:white;
-   
-   
+    background: linear-gradient(to right, rgba(255, 105, 180, 0.8), rgba(65, 105, 225, 0.8));
+   width: max-content;
+   border-radius: 50%;
+   padding:10px;
  }
  .emailboxwrite{
- height:100%;
+ height:50%;
  width: 100%;
  
  }
@@ -889,9 +920,13 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
     font-weight: 500;
     font-size: 1rem;
     color:white;
+    background: linear-gradient(to right, rgba(255, 105, 180, 0.8), rgba(65, 105, 225, 0.8));
+    width: max-content;
+    border-radius: 50%;
+    padding:10px;
  }
  .subjectboxwrite{
- height:50%;
+ height:40%;
  width: 100%;
  background-color: white;
  }
@@ -900,9 +935,13 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
     font-weight: 500;
     font-size: 1rem;
     color:white;
+    background: linear-gradient(to right, rgba(255, 105, 180, 0.8), rgba(65, 105, 225, 0.8));
+    width: max-content;
+    border-radius: 50%;
+    padding:10px;
  }
  .messageboxwrite{
-    height:100%;
+    height:150%;
  width: 100%;
  background-color: white;
  }
