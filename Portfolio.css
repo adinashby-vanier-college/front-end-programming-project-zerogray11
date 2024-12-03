@@ -459,9 +459,21 @@ perspective: 1000px;
     font-family: 'Orbitron', sans-serif;
     color:greenyellow;
     height:40px;
-    width: 40%;
+    width: 130px;
     font-weight: 520;
     cursor: pointer;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.1),
+        0 6px 6px rgba(0,0,0,0.1),
+        inset 0 2px 4px rgba(255,255,255,0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
    
  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(78,169,212,1) 49%, rgba(29,253,169,1) 99%, rgba(69,252,153,1) 100%);
  
@@ -502,18 +514,54 @@ perspective: 1000px;
     text-align: center;
     font-family: 'Orbitron', sans-serif;
     font-weight: 520;
-    height:50px;
-    width: 40%;
+    height:40px;
+    width: 130px;
     cursor: pointer;
     color:greenyellow;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.1),
+        0 6px 6px rgba(0,0,0,0.1),
+        inset 0 2px 4px rgba(255,255,255,0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 
    
  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(78,169,212,1) 49%, rgba(29,253,169,1) 99%, rgba(69,252,153,1) 100%);
  }
+
  .polisci:hover, .compsci:hover, .cloud:hover{
     background: linear-gradient(90deg, rgba(101, 48, 146, 1) 0%, rgba(58, 139, 194, 1) 49%, rgba(15, 219, 125, 1) 99%, rgba(50, 215, 138, 1) 100%); /* Darker gradient */
     transform: translateY(-2px);
  }
+ 
+button {
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+    padding: 10px 20px;      
+    font-size: 16px;        
+    text-align: center;      
+    border: 1px solid #ccc;  
+    background-color: #f8f8f8;
+    cursor: pointer;       
+    border-radius: 5px;      
+    width: auto;              
+}
+
+
+#itbuttonrows {
+    display: flex;
+    justify-content: space-evenly; 
+    gap: 10px;                   
+    margin-bottom: 10px;          
+}
+
+
  
  
  #boxProjects{
