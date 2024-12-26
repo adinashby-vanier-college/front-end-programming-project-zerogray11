@@ -29,6 +29,7 @@
     }
  }
  #boxIntro{
+    animation: border-glow 0.5s ease-in-out infinite;
  display: flex;
  flex-direction: column;
 align-items: center;
@@ -37,6 +38,17 @@ justify-content: space-between;
  height:45%;
  width: 80%;
  gap:10px;
+ perspective: 1000px;
+    transform-style: preserve-3d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.1),
+        0 6px 6px rgba(0,0,0,0.1),
+        inset 0 2px 4px rgba(255,255,255,0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
  
  }
  
@@ -48,7 +60,7 @@ justify-content: space-between;
     font-size: 1.5rem !important;
     font-family: "Roboto Mono", serif;
     font-weight: 500;
-    overflow: hidden;
+    
     width: 0;
     
     display: inline-block;
@@ -58,7 +70,7 @@ justify-content: space-between;
     animation-delay: 0.5s;}
     
  .hey::after{
-    content: "|";
+    content: "";
     position: absolute;
     right: 0;
     top: 0;
@@ -67,6 +79,7 @@ justify-content: space-between;
     background-color: black;
     animation: blink 0.5s step-end infinite;
  }
+ 
  p{
 font-family: "Roboto Mono", serif;
 color: black;
@@ -115,8 +128,8 @@ font-weight: 500;
  .btn-intro {
     font-family: 'Orbitron', sans-serif;
     font-weight: 500;
-    width: 185px;
-    height: 32px;
+    width: 190px;
+    height: 43px;
     font-size: 16px;
     border-radius: 99%;
     background-color: #333333;
@@ -131,6 +144,8 @@ font-weight: 500;
     overflow: hidden;
     outline: none;
     transform-origin: center;
+    
+    
 }
 
 .btn-intro .ripple {
@@ -190,6 +205,7 @@ font-weight: 500;
    padding: 8px;
    animation: border-glow 0.5s ease-in-out infinite;
    border-radius: 50%;
+   
   
   
  
@@ -287,7 +303,7 @@ font-weight: 500;
     }
   }
   #boxAbout{
-    height:100svh;
+    height:103svh;
     display: flex;
     flex-direction: column;
     background-image: url(aurore.jpeg);
@@ -300,14 +316,15 @@ font-weight: 500;
  #aboutTitle{
     height: 35%;
    width: 100%;
-   background: rgb(131,58,180);
+  
  background: linear-gradient(90deg, rgba(131,58,180,1) 25%, rgba(78,169,212,1) 73%, rgba(29,253,169,1) 99%, rgba(69,252,153,1) 100%);
     gap: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
- 
+    
+
  
  }
  .about{
@@ -317,7 +334,7 @@ font-weight: 500;
  margin-top: 40px;
  font-weight: 550;
  font-family: 'Orbitron', sans-serif;
- font-size: 3rem;
+ font-size: 3.5rem;
  color: #f5f5f5;
  
  
@@ -328,7 +345,7 @@ font-weight: 500;
  font-style: italic;
  font-family: 'Orbitron', sans-serif;
  font-weight: 500;
- font-size: 1rem;
+ font-size: 1.5rem;
  align-items: center;
  color: #f5f5f5;;
  
@@ -372,7 +389,21 @@ font-weight: 500;
     height:max-content;
     width: 100%;
     margin-top: 0;
+    transform-style: preserve-3d;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.1),
+        0 6px 6px rgba(0,0,0,0.1),
+        inset 0 2px 4px rgba(255,255,255,0.5);
+    transition: all 0.3s ease;
     
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(47, 63, 74,0.7);
     width: max-content;
     
  }
@@ -384,12 +415,12 @@ font-weight: 500;
  
  .descp{
     margin-top: 0;
-    background-color: rgb(47, 63, 74,0.7);
+    background-color: rgb(47, 63, 74,0.8);
 line-height: 2;
 Height: 70%;
 Font-family: 'Montserrat', sans-serif;
 color: greenyellow;
-font-weight: 520 ;
+font-weight: 530 ;
 font-size: 1rem;
 text-align: center;
 width: 80%;
@@ -430,9 +461,23 @@ perspective: 1000px;
     font-weight: 500;
     color: white;
     margin-top: 30px;
+    margin-left: 90px;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
-    
+    box-shadow: 
+    0 10px 20px rgba(0,0,0,0.1),
+    0 6px 6px rgba(0,0,0,0.1),
+    inset 0 2px 4px rgba(255,255,255,0.5);
+transition: all 0.3s ease;
+padding: 15px;
+overflow: hidden;
+display: flex;
+border-radius: 10px;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+background-color: rgb(47, 63, 74,0.7);
+width: max-content;
    
  }
  #itTitle svg {
@@ -457,10 +502,10 @@ perspective: 1000px;
  .javascript, .java, .sql, .html, .css, .nodejs, .aws, .photoshop{
     text-align: center;
     font-family: 'Orbitron', sans-serif;
-    color:greenyellow;
+    color:rgb(153, 246, 13);
     height:40px;
-    width: 130px;
-    font-weight: 520;
+    width: 40%;
+    font-weight: 550;
     cursor: pointer;
     perspective: 1000px;
     transform-style: preserve-3d;
@@ -475,7 +520,7 @@ perspective: 1000px;
     overflow: hidden;
 
    
- background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(78,169,212,1) 49%, rgba(29,253,169,1) 99%, rgba(69,252,153,1) 100%);
+ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(78,169,212,1) 49%, rgb(16, 199, 132) 99%, rgb(12, 60, 35) 100%);
  
  
     transition: background-color 0.3s ease;
@@ -499,6 +544,21 @@ perspective: 1000px;
  font-family: 'Orbitron', sans-serif;
  font-size: 1.5rem;
  color: #f5f5f5;
+ box-shadow: 
+ 0 10px 20px rgba(0,0,0,0.1),
+ 0 6px 6px rgba(0,0,0,0.1),
+ inset 0 2px 4px rgba(255,255,255,0.5);
+transition: all 0.3s ease;
+padding: 15px;
+overflow: hidden;
+display: flex;
+border-radius: 10px;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+margin-left: 140px;
+background-color: rgb(47, 63, 74,0.7);
+width: max-content;
    
  }
  .certTitle svg {
@@ -509,6 +569,22 @@ perspective: 1000px;
     flex-direction: row;
     justify-content: space-between;
     gap:10px;
+ }
+ .polisci, .compsci, .cloud{
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 550;
+    height:40px;
+    width: 40%;
+    cursor: pointer;
+    color:greenyellow;
+
+   
+ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(78,169,212,1) 49%, rgba(29,253,169,1) 99%, rgba(69,252,153,1) 100%);
+ }
+ .polisci:hover, .compsci:hover, .cloud:hover{
+    background: linear-gradient(90deg, rgba(101, 48, 146, 1) 0%, rgba(58, 139, 194, 1) 49%, rgba(15, 219, 125, 1) 99%, rgba(50, 215, 138, 1) 100%); /* Darker gradient */
+    transform: translateY(-2px);
  }
  .polisci, .compsci, .cloud{
     text-align: center;
@@ -531,7 +607,7 @@ perspective: 1000px;
     overflow: hidden;
 
    
- background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(78,169,212,1) 49%, rgba(29,253,169,1) 99%, rgba(69,252,153,1) 100%);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(78,169,212,1) 49%, rgb(16, 199, 132) 99%, rgb(12, 60, 35) 100%);
  }
 
  .polisci:hover, .compsci:hover, .cloud:hover{
@@ -539,7 +615,7 @@ perspective: 1000px;
     transform: translateY(-2px);
  }
  
-button {
+ .javascript, .java, .sql, .html, .css, .nodejs, .aws, .photoshop, .polisci, .compsci, .cloud {
     display: flex;
     justify-content: center;  
     align-items: center;     
@@ -561,7 +637,6 @@ button {
     margin-bottom: 10px;          
 }
 
-
  
  
  #boxProjects{
@@ -581,48 +656,114 @@ button {
  .projectstitlebox{
     display: flex;
     flex-direction: column;
-    height:20%;
+    height:24%;
     width:100%;
     align-items: center;
     gap:20px;
-  
-   
+    transform-style: preserve-3d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.1),
+        0 6px 6px rgba(0,0,0,0.1),
+        inset 0 2px 4px rgba(255,255,255,0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(119, 181, 210, 0.1);
    
  }
  .projectstitle{
-    font-size: 1.5rem;
-    margin-top: 20px;
-    font-weight: 500;
+   
+   text-shadow:
+    1px 1px 0 #fff8f8,
+    2px 2px 0 #ffffff,
+    3px 3px 0 #ccc,
+    4px 4px 0 #ccc,
+    5px 5px 0 #ccc,
+    6px 6px 0 #ccc
+    
+   ;
+   transform: skewX(-30deg) !important;
+    transform: 
+    translateZ(50px)
+    rotateX(0deg)
+    rotateY(45deg);
+    font-size: 2.5rem;
+    margin-top:-15px;
+    font-weight: 520;
     color: rgb(255, 255, 255);
     font-family: 'Orbitron', sans-serif;
     text-align: center;
-    animation: border-glow 0.5s ease-in-out infinite;
-    background-color: rgb(200,200,200,.8);
+    transform-style: preserve-3d;
+    padding: 40px;
+    border-radius: 50px;
+    /*box-shadow: 
+        0 10px 20px rgba(0,0,0,0.1),
+        0 6px 6px rgba(0,0,0,0.1),
+        inset 0 2px 4px rgba(255,255,255,0.5);*/
+    transition: all 0.3s ease;
+    
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
-    padding: 10px;
+    background-color: rgb(50, 116, 144);
+    box-shadow:
+    -3px -3px 0 0 rgb(40, 92, 115),
+    -5px -5px 0 0 rgb(30, 69, 86),
+    -7px -7px 0 0 rgb(32, 75, 93);
+  transform: rotateX(20deg) rotateY(30deg);
+   
   
  
  
  }
  .projectsubtitle{
- font-size:0.9rem;
- font-weight: 500;
+   transform: skewX(-10deg);
+   
+   text-shadow:
+    1px 1px 0 #ccc,
+    2px 2px 0 #ccc;
+ font-size:1.2rem;
+ font-weight: 550;
  font-style: italic;
  color: rgb(255, 255, 255);
-   margin-top: -20px;
+   
     font-family: 'Orbitron', sans-serif;
     text-align: center;
-    animation: border-glow 0.5s ease-in-out infinite;
     border-radius: 50%;
-    padding: 10px;
-    background-color: rgb(200,200,200,.8);
+    padding: 20px;
+    background-color: rgb(50, 116, 144);
+   margin-top: 0px;
+   /*box-shadow: 
+   0 10px 20px rgba(0,0,0,0.1),
+   0 6px 6px rgba(0,0,0,0.1),
+   inset 0 2px 4px rgba(255,255,255,0.5);*/
+   box-shadow:
+   -3px -3px 0 0 rgb(40, 92, 115),
+   -5px -5px 0 0 rgb(30, 69, 86),
+   -7px -7px 0 0 rgb(32, 75, 93);
+ 
+transition: all 0.3s ease;
+transform: 
+    translateZ(50px)
+    rotateX(0deg)
+    rotateY(45deg);
+overflow: hidden;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
    
  }
  .projectsbox{
-    margin-top: 20px;
+    margin-top: 55px;
     display:flex;
     flex-direction: row;
-    height:max-content;
+    height:65%;
     width:80%;
     gap:20px;
    
@@ -631,7 +772,7 @@ button {
  .projectsbox1{
     display: flex;
     flex-direction: column;
-    height:max-content;
+    height:100%;
     width:50%;
     gap:25px
   
@@ -641,7 +782,7 @@ button {
  .projectsbox2{
     display: flex;
     flex-direction: column;
-    height:max-content;
+    height: 100%;
     width:50%;
     gap:25px;
    
@@ -649,6 +790,16 @@ button {
  
  }
  .project1 {
+    transform-style: preserve-3d;
+    padding: 20px;
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.1),
+        0 6px 6px rgba(0,0,0,0.1),
+        inset 0 2px 4px rgba(255,255,255,0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 4px solid rgb(50, 116, 144,0.6) !important;
     animation: border-glow 0.5s ease-in-out infinite;
     height: 100%;
     width: 100%;
@@ -659,8 +810,9 @@ button {
     cursor: pointer;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    
+    border-radius: 20% !important;}
   
- }
  .project-link {
     display: block;
     height: 100%;
@@ -679,6 +831,15 @@ button {
     border: none;
  }
  .project2{
+    transform-style: preserve-3d;
+    padding: 20px;
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.1),
+        0 6px 6px rgba(0,0,0,0.1),
+        inset 0 2px 4px rgba(255,255,255,0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
     animation: border-glow 0.5s ease-in-out infinite;
     height:100%;
     width:100%;
@@ -688,6 +849,8 @@ button {
     cursor: pointer;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    border: 4px solid rgb(50, 116, 144,0.6) !important;
+    border-radius: 20% !important;
    
  }
  .project2:hover{
@@ -695,6 +858,15 @@ button {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2)!important;
  }
  .project3{
+    transform-style: preserve-3d;
+    padding: 20px;
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.1),
+        0 6px 6px rgba(0,0,0,0.1),
+        inset 0 2px 4px rgba(255,255,255,0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
     animation: border-glow 0.5s ease-in-out infinite;
     height:100%;
     width:100%;
@@ -705,6 +877,8 @@ button {
     cursor: pointer;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 4px solid rgb(50, 116, 144,0.6) !important;
+    border-radius: 20% !important;
  }
  .project3:hover{
     transform: translateY(-10px) rotateY(5deg) rotateX(5deg)!important;
@@ -721,6 +895,17 @@ button {
     cursor: pointer;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease!important;
+    border: 4px solid rgb(50, 116, 144,0.6) !important;
+    border-radius: 20% !important;
+    transform-style: preserve-3d;
+    padding: 20px;
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.1),
+        0 6px 6px rgba(0,0,0,0.1),
+        inset 0 2px 4px rgba(255,255,255,0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
  }
  .project4:hover{
     transform: translateY(-10px) rotateY(5deg) rotateX(5deg)!important;
@@ -745,7 +930,7 @@ background-size: cover;
    /*background-color: rgba(34, 102, 170, 1);*/
    background: linear-gradient(to right, rgba(255, 105, 180, 0.8), rgba(65, 105, 225, 0.8));
    border-radius: 90%;
-   padding: 18px;
+   padding: 20px;
     height: max-content;
     width: max-content;
     display: flex;
@@ -753,11 +938,23 @@ background-size: cover;
     flex-direction: column;
     text-align: center;
     gap:15px;
- 
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.1),
+        0 6px 6px rgba(0,0,0,0.1),
+        inset 0 2px 4px rgba(255,255,255,0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid white;
+
  
  }
  .contactTitle{
-    margin-top: 20px;
+    margin-top: 0px;
     font-size: 2rem;
     font-weight: 500;
     color: white;
@@ -815,7 +1012,7 @@ background-size: cover;
  }
  .email{
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 530;
     color: white;
     margin-top: 15px;
     font-family: 'Orbitron', sans-serif;
@@ -837,8 +1034,9 @@ background-size: cover;
     font-size: 1.2rem;
     margin-left: 30px;
     font-family: 'Exo 2', sans-serif;
-    font-weight: 500;
-    color: silver;
+    font-weight: 530;
+    color: rgb(178, 178, 178);
+    
    
   }
   
@@ -849,11 +1047,12 @@ background-size: cover;
     bottom: 50px;
     width: calc(60% + 20px);
     height: 60%;
-    background: linear-gradient(to right, rgba(255, 105, 180, 0.3), rgba(65, 105, 225, 0.3));
+    background: linear-gradient(to right, rgba(255, 105, 180, 1), rgba(65, 105, 225, 1));
     transform: rotate(-2deg);
     z-index: -1;
     border-radius: 5px;
     animation: paint-sweep 3s infinite alternate;
+    border: 1px solid white;
   }
   
   @keyframes paint-sweep {
@@ -878,7 +1077,7 @@ background-size: cover;
  }
  .linkedinlink{
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 530;
     color: white;
    
     font-family: 'Orbitron', sans-serif;
@@ -895,7 +1094,7 @@ background-size: cover;
  .llink{
     margin-left: 30px;
     font-family: 'Exo 2', sans-serif;
-    font-weight: 500;
+    font-weight: 530;
     color:silver;
     font-size: 1.2rem;}
  
@@ -932,6 +1131,17 @@ background-size: cover;
     flex-direction: column;
  }
  .sendmessage{
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+    padding: 10px 20px;      
+    font-size: 16px;        
+    text-align: center;      
+    border: 1px solid #ccc;  
+    background-color: #f8f8f8;
+    cursor: pointer;       
+    border-radius: 5px;      
+    width: auto;     
   color:white;
     height:18%;
     width: 40%;
@@ -939,6 +1149,18 @@ background-size: cover;
     font-weight: 500;
     border: 2px solid white;
     font-size: 0.9rem;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.1),
+        0 6px 6px rgba(0,0,0,0.1),
+        inset 0 2px 4px rgba(255,255,255,0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
     background: linear-gradient(to right, rgba(255, 105, 180, 0.8), rgba(65, 105, 225, 0.8));
    
     /*background: rgb(65,58,180);
@@ -957,6 +1179,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
    width: max-content;
    border-radius: 50%;
    padding:10px;
+   border: 1px solid white;
  }
  .emailboxwrite{
  height:50%;
@@ -972,6 +1195,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
     width: max-content;
     border-radius: 50%;
     padding:10px;
+    border: 1px solid white;
  }
  .subjectboxwrite{
  height:40%;
@@ -987,6 +1211,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
     width: max-content;
     border-radius: 50%;
     padding:10px;
+    border: 1px solid white;
  }
  .messageboxwrite{
     height:150%;
@@ -1020,23 +1245,35 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
     justify-content: center;
     height: 20%;
     width: 100%;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.1),
+        0 6px 6px rgba(0,0,0,0.1),
+        inset 0 2px 4px rgba(255,255,255,0.5);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+   
 
  }
  .ServicesTitle{
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 2.5rem;
+    font-weight: 520;
     color: white;
     text-shadow: #696868;
     margin-top: 30px;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
-    
  }
 #serviceBoxes{
     display: flex;
     flex-direction: row;
-    height: 65%;
-    width: 95%;
+    height: 40%;
+    width: 80%;
     gap:15px;
 }
 
@@ -1051,15 +1288,15 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
 }
 .backendtitle{
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 520;
     color: black;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
 }
 .backend{
     border-radius: 50%;
-    height: 40%;
-    width: 60%;
+    height: 60%;
+    width: 70%;
     
 }
 .backendescription{}
@@ -1075,7 +1312,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
 }
 .frontendtitle{
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 520;
     color: black;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
@@ -1083,8 +1320,8 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
 }
 .frontend{
     border-radius: 50%;
-    height: 40%;
-    width: 60%;
+    height: 60%;
+    width: 70%;
 }
 .frontendescription{}
 .programManagementService{
@@ -1099,7 +1336,7 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
 
 .pmtitle{
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 520;
     color: black;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
@@ -1107,8 +1344,8 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
 }
 .pm{
     border-radius: 50%;
-    height: 40%;
-    width: 60%;
+    height: 60%;
+    width: 70%;
     
 }
 .pmdescription{}
@@ -1133,15 +1370,15 @@ background: linear-gradient(90deg, rgba(45,94,200,1) 0%, rgba(28,46,77,1) 16%, r
 }
 .omtitle{
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 520;
     color: black;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
 }
 .onlinemarketing{
     border-radius: 50%;
-    height: 40%;
-    width: 60%;
+    height: 60%;
+    width: 70%;
 }
 .omdescription{}
 
